@@ -1,0 +1,63 @@
+:root{
+  --felt:#0f3b2c; --felt-deep:#0a2a1f; --felt-line:#1d5a44;
+  --gold:#d6b25e; --gold-soft:#b8964a; --cream:#f3ead6; --cream-dim:#c9c0ab;
+  --ink:#0b1712; --red:#c8402f;
+  --maxw:960px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--felt-deep);color:var(--cream);
+  font:17px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--gold)}
+a:hover{color:var(--cream)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--felt-line);background:rgba(10,42,31,.92);position:sticky;top:0;z-index:5;backdrop-filter:blur(6px)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{font-family:"Josefin Sans",sans-serif;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cream);text-decoration:none;font-size:18px}
+.brand span{color:var(--gold)}
+nav.top a{color:var(--cream-dim);text-decoration:none;margin-left:20px;font-size:15px;letter-spacing:.04em}
+nav.top a:hover,nav.top a[aria-current]{color:var(--gold)}
+.hero{background:radial-gradient(120% 90% at 50% 0%,#17573f 0%,var(--felt) 45%,var(--felt-deep) 100%);
+  border-bottom:6px solid #5a3a22;box-shadow:inset 0 -2px 0 #7a5233}
+.hero .wrap{padding:72px 20px 64px;text-align:center}
+.eyebrow{font-family:"Josefin Sans",sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-size:13px;margin:0 0 12px}
+h1,h2,h3{font-family:"Josefin Sans",sans-serif;line-height:1.2;color:var(--cream)}
+h1{font-size:clamp(34px,6vw,58px);letter-spacing:.06em;margin:0 0 16px;text-transform:uppercase}
+h2{font-size:26px;letter-spacing:.04em;margin:48px 0 12px}
+h3{font-size:19px;margin:28px 0 8px;color:var(--gold)}
+.lead{font-size:19px;color:var(--cream-dim);max-width:640px;margin:0 auto}
+.balls{display:flex;justify-content:center;gap:14px;margin:28px 0 0}
+.ball{width:26px;height:26px;border-radius:50%;box-shadow:inset -4px -5px 8px rgba(0,0,0,.35),inset 3px 3px 5px rgba(255,255,255,.45)}
+.b-white{background:#f4f1e8}.b-yellow{background:#e9c33b}.b-red{background:var(--red)}
+main{padding:24px 0 72px}
+.card{display:block;background:var(--felt);border:1px solid var(--felt-line);border-radius:14px;padding:26px;text-decoration:none;color:var(--cream);transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-2px);color:var(--cream)}
+.card h3{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--gold);border-radius:999px;padding:3px 10px;margin-bottom:10px;font-weight:600}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:600;border-radius:999px;padding:11px 22px;margin:8px 6px 0}
+.btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn:hover{background:var(--cream);color:var(--ink)}
+ul.feat{list-style:none;padding:0;margin:0}
+ul.feat li{padding:10px 0 10px 28px;border-bottom:1px solid var(--felt-line);position:relative}
+ul.feat li::before{content:"";position:absolute;left:4px;top:19px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.doc{background:var(--felt);border:1px solid var(--felt-line);border-radius:14px;padding:8px 28px 28px;margin-top:24px}
+.doc p,.doc li{color:var(--cream)}
+.doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+.doc th,.doc td{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid var(--felt-line)}
+.doc th{color:var(--gold);font-weight:600}
+.meta-line{color:var(--cream-dim);font-size:15px}
+footer.site{border-top:1px solid var(--felt-line);padding:28px 0;color:var(--cream-dim);font-size:14px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer.site a{color:var(--cream-dim);margin-left:16px}
+@media (max-width:600px){
+  nav.top a{margin:0 16px 0 0}
+  .doc{padding:4px 18px 20px}
+  .doc table,.doc thead,.doc tbody,.doc tr,.doc th,.doc td{display:block}
+  .doc thead{display:none}
+  .doc td{border:0;padding:4px 0}
+  .doc td:first-child{font-weight:600;color:var(--gold)}
+  .doc tr{border-bottom:1px solid var(--felt-line);padding:10px 0}
+  footer.site a{margin:0 16px 0 0}
+}
